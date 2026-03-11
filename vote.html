@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vote Eligibility Checker</title>
+
+<style>
+
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg,#8e44ad,#e84393);
+}
+
+.card{
+    background: rgba(255,255,255,0.2);
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    color:white;
+    width:320px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+h2{
+    margin-bottom:20px;
+}
+
+input{
+    width:90%;
+    padding:10px;
+    border-radius:8px;
+    border:none;
+    font-size:16px;
+}
+
+button{
+    margin-top:15px;
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#1abc9c;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#16a085;
+}
+
+#result{
+    margin-top:20px;
+    font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h2>Vote Eligibility Checker</h2>
+
+<input type="number" id="age" placeholder="Enter your age">
+
+<button onclick="checkAge()">Check Eligibility</button>
+
+<p id="result"></p>
+
+</div>
+
+<script>
+
+function checkAge(){
+
+let age = document.getElementById("age").value;
+let result = document.getElementById("result");
+
+if(age >= 18){
+    result.innerText = "You are eligible to vote.";
+}
+else{
+    result.innerText = "You are not eligible to vote.";
+}
+
+}
+
+</script>
+
+</body>
+</html>
